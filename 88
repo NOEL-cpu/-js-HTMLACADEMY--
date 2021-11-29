@@ -1,0 +1,12 @@
+let password = document.querySelector('.password');
+let showPassword = document.querySelector('.show-password');
+
+showPassword.onchange = function () {
+  password.type = 'text';
+};
+
+/*На 2 строке объявите переменную showPassword и запишите в неё элемент с классом show-password.
+Ниже добавьте элементу showPassword обработчик событий onchange.
+Переместите инструкцию password.type = 'text'; внутрь обработчика.
+В мини-браузере включите чекбокс «Показать пароль». Обратите внимание, что стал виден текст в поле ввода «Пароль».
+Выключите чекбокс. Обратите внимание, что пароль не спрятался.*/
