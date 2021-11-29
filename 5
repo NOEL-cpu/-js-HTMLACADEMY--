@@ -1,0 +1,15 @@
+let longread = document.querySelector('.longread');
+let colorSetting = document.querySelector('.color-setting');
+let sizeSetting = document.querySelector('.size-setting');
+let pixels = document.querySelector('.pixels');
+
+colorSetting.onchange = function () {
+  longread.style.color = colorSetting.value;
+};
+
+sizeSetting.oninput = function () {
+  pixels.textContent = sizeSetting.value;
+  longread.style.fontSize = sizeSetting.value + 'px';
+};
+/*На 10 строке замените обработчик onchange на oninput
+В мини-браузере передвиньте ползунок «Размер текста» вправо, до конца. Обратите внимание, размер текста изменялся одновременно с перемещением ползунка.*/
