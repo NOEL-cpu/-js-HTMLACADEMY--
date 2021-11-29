@@ -1,0 +1,18 @@
+let longread = document.querySelector('.longread');
+let colorSetting = document.querySelector('.color-setting');
+let sizeSetting = document.querySelector('.size-setting');
+let pixels = document.querySelector('.pixels');
+
+colorSetting.onchange = function () {
+  longread.style.color = colorSetting.value;
+};
+
+sizeSetting.onchange = function () {
+  pixels.textContent = sizeSetting.value;
+};
+
+/*На 3 строке объявите переменную sizeSetting и запишите в неё элемент с классом size-setting
+На следующей строке объявите переменную pixels и запишите в неё элемент с классом pixels
+На 10 строке добавьте элементу sizeSetting обработчик событий onсhange
+Внутри этого обработчика присвойте pixels.textContent значение sizeSetting.value
+В мини-браузере передвиньте ползунок «Размер текста» вправо, до конца. Обратите внимание, рядом с полем вывелся новый размер текста — 48px, но при этом текст в статье не изменился.*/
