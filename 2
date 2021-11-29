@@ -1,0 +1,12 @@
+let longread = document.querySelector('.longread');
+let colorSetting = document.querySelector('.color-setting');
+
+colorSetting.onchange = function () {
+  longread.style.color = colorSetting.value;
+};
+
+/*На 2 строке объявите переменную colorSetting и запишите в неё элемент с классом color-setting.
+Ниже добавьте элементу colorSetting обработчик событий onchange.
+Переместите инструкцию longread.style.color = 'purple'; внутрь обработчика.
+Внутри обработчика замените 'purple' на выбранное значение выпадающего списка: colorSetting.value.
+В мини-браузере выберите в выпадающем списке «Цвет текста» значение «Оранжевый». Обратите внимание, что цвет текста в статье стал оранжевым.*/
