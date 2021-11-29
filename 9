@@ -1,0 +1,15 @@
+let password = document.querySelector('.password');
+let showPassword = document.querySelector('.show-password');
+
+showPassword.onchange = function () {
+  if (showPassword.checked) {
+    password.type = 'text';
+  } else {
+    password.type = 'password';
+  }
+};
+
+/*На 5 строке добавьте условную конструкцию. В качестве условия укажите showPassword.checked.
+Переместите инструкцию password.type = 'text'; внутрь условной конструкции.
+Добавьте в условную конструкцию альтернативную ветку else. Внутри неё измените тип поля password на 'password'.
+В мини-браузере включите чекбокс «Показать пароль», а потом выключите. Обратите внимание, что пароль сначала показался, а потом спрятался.*/
