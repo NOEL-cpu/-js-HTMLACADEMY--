@@ -1,0 +1,16 @@
+let longread = document.querySelector('.longread');
+let colorSetting = document.querySelector('.color-setting');
+let sizeSetting = document.querySelector('.size-setting');
+let pixels = document.querySelector('.pixels');
+
+colorSetting.onchange = function () {
+  longread.style.color = colorSetting.value;
+};
+
+sizeSetting.onchange = function () {
+  pixels.textContent = sizeSetting.value;
+  longread.style.fontSize = sizeSetting.value + 'px';
+};
+
+/*На 12 строке присвойте longread.style.fontSize значение sizeSetting.value + 'px'
+В мини-браузере передвиньте ползунок «Размер текста» вправо, до конца. Обратите внимание, размер текста резко стал больше.*/
