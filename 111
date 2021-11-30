@@ -1,0 +1,21 @@
+let password = document.querySelector('.password');
+let showPassword = document.querySelector('.show-password');
+let securityBar = document.querySelector('.security-bar');
+
+
+showPassword.onchange = function () {
+  if (showPassword.checked) {
+    password.type = 'text';
+  } else {
+    password.type = 'password';
+  }
+};
+
+password.oninput=function(){
+  securityBar.style.width = password.value.length*10+'%';
+};
+
+/*На 14 строке добавьте элементу password обработчик событий oninput
+Переместите инструкцию securityBar.style.width = '50%'; внутрь обработчика oninput.
+Замените '50%' на password.value.length * 10 + '%'
+В мини-браузере начните набирать текст в поле ввода «Пароль». Будет достаточно любых трёх символов.*/
