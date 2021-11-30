@@ -1,0 +1,24 @@
+let password = document.querySelector('.password');
+let showPassword = document.querySelector('.show-password');
+let securityBar = document.querySelector('.security-bar');
+
+showPassword.onchange = function () {
+  if (showPassword.checked) {
+    password.type = 'text';
+  } else {
+    password.type = 'password';
+  }
+};
+
+password.oninput = function () {
+  let passLength = password.value.length;
+  securityBar.style.width = passLength * 10 + '%';
+
+  if (passLength <= 5) {
+    securityBar.style.backgroundColor = 'red';
+  }
+};
+/*На 17 строке добавьте условную конструкцию. В качестве условия укажите passLength <= 5.
+Внутри условной конструкции измените цвет фона элемента securityBar на красный: securityBar.style.backgroundColor = 'red';.
+В мини-браузере начните набирать текст в поле ввода «Пароль». Будет достаточно любых трёх символов.
+Обратите внимание, что полоска под полем ввода стала красной.*/
