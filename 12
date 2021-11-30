@@ -1,0 +1,21 @@
+let password = document.querySelector('.password');
+let showPassword = document.querySelector('.show-password');
+let securityBar = document.querySelector('.security-bar');
+
+showPassword.onchange = function () {
+  if (showPassword.checked) {
+    password.type = 'text';
+  } else {
+    password.type = 'password';
+  }
+};
+
+password.oninput = function () {
+  let passLength = password.value.length;
+  securityBar.style.width = passLength * 10 + '%';
+};
+
+/*На 14 строке объявите переменную passLength и запишите в неё длину пароля: password.value.length
+На следующей строке замените password.value.length на переменную passLength
+В мини-браузере начните набирать текст в поле ввода «Пароль». Будет достаточно любых трёх символов.
+Обратите внимание, что полоска растёт так же, как и прежде.*/
